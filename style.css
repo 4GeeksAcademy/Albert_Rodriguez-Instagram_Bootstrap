@@ -1,0 +1,13 @@
+.custom-green-button {
+    background-color: green;
+    /* You can add more styles as needed */
+  }
+
+.navbar{
+    display: flex;
+}
+.right-side-nav{
+    align-items: end;
+    margin: 5px;
+}
+
