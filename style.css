@@ -1,7 +1,18 @@
+/* styles.css */
 .custom-green-button {
     background-color: green;
-    /* You can add more styles as needed */
-  }
+    color: white;
+    border: none;
+    margin: 2px;
+}
+
+.custom-button-group {
+    display: flex;
+}
+
+.custom-button-group .dropdown {
+    margin-right: 10px;
+}
 
 .navbar{
     display: flex;
@@ -10,4 +21,36 @@
     align-items: end;
     margin: 5px;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin-top as needed */
+}
 
+/* Custom styling for the button */
+.custom-button {
+    /* Add your custom button styles here */
+}
+
+/* Style for the custom buttons */
+.custom-button {
+    margin-right: 10px;
+}
+
+/* Style for the gallery button */
+#gallery {
+    cursor: pointer;
+}
+
+/* Style for the gallery view container */
+#gallery-view {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Style for gallery images */
+#gallery-view img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
