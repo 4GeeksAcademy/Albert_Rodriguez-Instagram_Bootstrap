@@ -16,68 +16,98 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- Include the custom CSS file -->
   </head>
   <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand"> <i class="fab fa-instagram"></i> INSTAGRAM </a>
             <div class="custom-button-group">
-                <!-- Button trigger dropdown -->
                 <div class="btn-group">
                     <button
                         type="button"
-                        class="btn btn-secondary dropdown-toggle"
+                        class="btn btn-secondary dropdown-toggle justify-content-end"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                     >
                         <i class="fas fa-cog"></i>
                     </button>
-                    <!--Dropdown Menu-->
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
+                    <div class="dropdown-menu justify-content-end">
+                        <a class="dropdown-item" href="#">Menu</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item logout" href="#">Logout</a>
                     </div>
-                </div>
-    
-                <label for="show-feed" class="btn btn-primary custom-green-button">
-                    Create a New Post
-                </label>
-            </div>
+                    <button
+            type="button"
+            class="btn btn-primary custom-green-button"
+            data-bs-toggle="modal"
+            data-bs-target="#postModal"
+          >
+            Create a New Post
+          </button>
         </div>
+      </div>
     </nav>
-    
 
-    <!--Centered buttons under the navbar-->
     <div class="d-flex justify-content-center mt-3">
       <input type="radio" id="show-feed" name="view-toggle" checked />
       <label for="show-feed" class="btn btn-primary custom-button">
         <i class="fa-solid fa-square"></i>
       </label>
 
-      <!--Button to switch to gallery view-->
       <input type="radio" id="show-gallery" name="view-toggle" />
       <label for="show-gallery" class="btn btn-primary custom-button">
         <i class="fa-solid fa-table-cells"></i>
       </label>
     </div>
 
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="postModalLabel">Create a New Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="postCaption" class="form-label">Caption</label>
+                <textarea class="form-control" id="postCaption" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="postImage" class="form-label">Image</label>
+                <input type="file" class="form-control" id="postImage">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container feed-container">
       <div class="card post-card">
+        <div class="card-header">
+          <h6 class="card-title">This is the way!</h6>
+          <p class="card-date">10/15</p>
+        </div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/a/a0/Grogu_%28Star_Wars%29.jpg"
           class="card-img-top"
-          alt="Post 1"
+          alt="Post 2"
         />
         <div class="card-body">
-          <p class="card-text">This is the way!</p>
+          <p class="card-text">Cooliooo</p>
         </div>
       </div>
       <div class="card post-card">
+        <div class="card-header">
+          <h6 class="card-title">Its a doggo!</h6>
+          <p class="card-date">10/16</p>
+        </div>
         <img
           src="https://placedog.net/640/480?random"
           class="card-img-top"
@@ -87,9 +117,9 @@
           <p class="card-text">Puppers!</p>
         </div>
       </div>
+      </div>
     </div>
 
-    <!--Gallery View-->
     <div id="gallery-view" class="container">
       <div class="row">
         <div class="col-md-4 gallery-item">
@@ -99,41 +129,41 @@
           />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 2" />
+          <img src="https://placedog.net/640/481?random" alt="Image 2" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 3" />
+          <img src="https://placedog.net/640/482?random" alt="Image 3" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 4" />
+          <img src="https://placedog.net/640/483?random" alt="Image 4" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/484?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/485?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/486?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/487?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/488?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/489?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/490?random" alt="Image 5" />
         </div>
         <div class="col-md-4 gallery-item">
-          <img src="https://placedog.net/640/480?random" alt="Image 5" />
+          <img src="https://placedog.net/640/491?random" alt="Image 5" />
         </div>
       </div>
     </div>
-    <!--My Scripts-->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
